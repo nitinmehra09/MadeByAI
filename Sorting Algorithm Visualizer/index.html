@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Visualizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="panel">
+      <h3>Array Controls</h3>
+      <div class="controls">
+        <button onclick="generateNewArray()">Generate New Array</button>
+        <label>Array Size: <input type="range" min="10" max="100" value="50" id="arraySize" onchange="generateNewArray()"></label>
+        <label>Speed: <input type="range" min="10" max="1000" value="100" id="speedInput"></label>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Sorting Controls</h3>
+      <div class="controls">
+        <button onclick="startSort('bubble')">Bubble Sort</button>
+        <button onclick="startSort('selection')">Selection Sort</button>
+        <button onclick="startSort('insertion')">Insertion Sort</button>
+        <button onclick="startSort('quick')">Quick Sort</button>
+        <button onclick="startSort('merge')">Merge Sort</button>
+      </div>
+    </div>
+
+    <div class="bar-container" id="barContainer"></div>
+
+    <div class="panel metrics">
+      <div class="metric-box">
+        <div>Time Elapsed</div>
+        <div id="timeElapsed">0 ms</div>
+      </div>
+      <div class="metric-box">
+        <div>Comparisons</div>
+        <div id="comparisonCount">0</div>
+      </div>
+      <div class="metric-box">
+        <div>Swaps</div>
+        <div id="swapCount">0</div>
+      </div>
+      <div class="metric-box">
+        <div>Current Algorithm</div>
+        <div id="currentAlgorithm">None</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
