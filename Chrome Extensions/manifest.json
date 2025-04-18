@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Analog Clock Extension",
+    "version": "1.0",
+    "description": "A simple analog clock displayed in the browser.",
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    }
+  }
+  
